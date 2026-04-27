@@ -83,7 +83,6 @@ class DataLoader:
     def convert_to_model(self, df: pd.DataFrame) -> List[GPSPoint]:
         """
         Maps DataFrame rows to GPSPoint dataclass objects.
-        This provides Type Safety for the Business Logic and Visualization layers.
         """
         return [
             GPSPoint(
