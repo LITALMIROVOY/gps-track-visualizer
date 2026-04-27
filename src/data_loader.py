@@ -13,12 +13,12 @@ class DataLoader:
         self.file_source = file_source
 
     def load_data(self) -> List[GPSPoint]:
-        df = self._read_csv()
-        self._validate_columns(df)
-        df = self._handle_missing_values(df)
-        df = self._validate_coordinates(df)
-        df = self._sort_by_timestamp(df)
-        return self._convert_to_model(df)
+        df = self.read_csv()
+        self.validate_columns(df)
+        df = self.handle_missing_values(df)
+        df = self.validate_coordinates(df)
+        df = self.sort_by_timestamp(df)
+        return self.convert_to_model(df)
     
     def read_csv(self) -> pd.DataFrame:
         try:
